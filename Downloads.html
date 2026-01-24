@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SKV Glass & Interiors</title>
+
+<link rel="icon" href="img-1/favicon.ico" type="image/x-icon">
+<link rel="stylesheet" href="css/index.css">
+<link rel="stylesheet" href="css/product.css">
+<link rel="stylesheet" href="css/contact.css">
+<link rel="stylesheet" href="css/Downloads.css">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+<body>
+
+
+
+    <!-- Loader section start -->
+<div id="loader">
+  <div class="loader-glass">
+    <div class="loader-circle"></div>
+    <div class="loader-circle"></div>
+    <div class="loader-circle"></div>
+  </div>
+</div>
+
+ <!-- Loader section End -->
+
+
+
+
+ <!-- mouse animation hover section start -->
+
+<div class="global-lens">
+  <div class="zoom-layer"></div>
+</div>
+
+ <!-- mouse animation hover section End -->
+
+
+
+
+ 
+<!-- Nav bar start -->
+
+<!-- GLASS TOGGLE -->
+<div class="glass-toggle" id="toggle"></div>
+
+<!-- SIDEBAR -->
+<aside class="sidebar" id="sidebar">
+
+ <div class="sidebar-image">
+  <img src="img-1/carousel-1.jpg" alt="Sidebar Image" class="sidebar-img">
+</div>
+
+  <div class="sidebar-glass"></div>
+
+  <ul class="menu">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="About.html">About</a></li>
+   <li><a href="Downloads.html">Downloads</a></li>
+
+    <li class="dropdown">
+      <a>Products ▾</a>
+      <div class="dropdown-menu">
+        <a href="fabiric-laminated.html">Fabric Laminated Glass</a>
+        <a href="Wire-Mesh.html">Wire Mesh Glass</a>
+        <a href="Reeded-Glass.html">Reeded Glass</a>
+        <a href="Tinted-Glass.html">Tinted Glass</a>
+        <a href="Marble-Glass.html">Marble Glass</a>
+        <a href="Lacquered-Glass.html">Lacquered Glass</a>
+      </div>
+    </li>
+
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</aside>
+
+
+<!-- Nav bar End -->
+
+
+
+
+<!-- BANNER section start -->
+
+<section class="download-banner">
+  <div class="overlay"></div>
+  <h1 class="banner-title">Downloads</h1>
+</section>
+
+
+<!-- BANNER section End -->
+
+
+
+
+
+<!-- intro section start-->
+
+
+<!-- DOWNLOAD INFO SECTION -->
+<section class="download-info">
+  <div class="download-info-container">
+
+    <!-- Left Image -->
+    <div class="download-info-image">
+      <img src="img-1/About/About-into-img.jpg" alt="Download Info">
+    </div>
+
+    <!-- Right Content -->
+    <div class="download-info-content">
+      <h2>Download Our Resources</h2>
+      <p>
+        Get access to our latest brochures, guides, and important documents.
+        All files are carefully prepared to help you understand our services
+        better and make informed decisions with ease.<br><br>
+
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut ratione quae ea numquam quibusdam in, blanditiis praesentium libero earum iste laboriosam! Iste voluptates<br><br>
+
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente amet facere perspiciatis. Nostrum iste repudiandae, quod quas molestias dolorem ducimus?
+      </p>
+    </div>
+
+  </div>
+</section>
+<script>
+const downloadInfoSection = document.querySelector('.download-info');
+
+const downloadObserver = new IntersectionObserver(
+  (entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('show');
+      }
+    });
+  },
+  {
+    threshold: 0.25
+  }
+);
+
+downloadObserver.observe(downloadInfoSection);
+</script>
+
+
+<!-- intro section  End-->
+
+
+
+
+
+ <!--pdf download section start-->
+
+<!-- Font Awesome CDN -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<section class="pdf-download-section">
+
+  <h2 class="pdf-heading">Download PDFs</h2>
+
+  <p class="pdf-description">
+    Download product information and technical details for our glass products.
+  </p>
+
+  <div class="pdf-grid">
+
+    <div class="pdf-card">
+      <h3 class="pdf-title">Fabric Laminated Glass</h3>
+
+      <img src="pdf/img-1.jpg" alt="Fabric Laminated Glass" class="pdf-thumb">
+
+      <button class="pdf-download-btn"
+        onclick="downloadPDF('pdf/SKV.pdf','Fabric-Laminated-Glass.pdf')">
+        <i class="fa-solid fa-file-pdf pdf-icon"></i>
+        Download
+      </button>
+    </div>
+
+    <div class="pdf-card">
+      <h3 class="pdf-title">Wire Mesh Glass</h3>
+
+      <img src="pdf/img-1.jpg" alt="Wire Mesh Glass" class="pdf-thumb">
+
+      <button class="pdf-download-btn"
+        onclick="downloadPDF('pdf/SKV.pdf','Wire-Mesh-Glass.pdf')">
+        <i class="fa-solid fa-file-pdf pdf-icon"></i>
+        Download
+      </button>
+    </div>
+
+
+     <div class="pdf-card">
+      <h3 class="pdf-title">Reeded Glass</h3>
+
+      <img src="pdf/img-1.jpg" alt="Wire Mesh Glass" class="pdf-thumb">
+
+      <button class="pdf-download-btn"
+        onclick="downloadPDF('pdf/SKV.pdf','Wire-Mesh-Glass.pdf')">
+        <i class="fa-solid fa-file-pdf pdf-icon"></i>
+        Download
+      </button>
+    </div>
+
+     <div class="pdf-card">
+      <h3 class="pdf-title">Tinted Glass</h3>
+
+      <img src="pdf/img-1.jpg" alt="Wire Mesh Glass" class="pdf-thumb">
+
+      <button class="pdf-download-btn"
+        onclick="downloadPDF('pdf/SKV.pdf','Wire-Mesh-Glass.pdf')">
+        <i class="fa-solid fa-file-pdf pdf-icon"></i>
+        Download
+      </button>
+    </div>
+
+     <div class="pdf-card">
+      <h3 class="pdf-title">Marble Glass</h3>
+
+      <img src="pdf/img-1.jpg" alt="Wire Mesh Glass" class="pdf-thumb">
+
+      <button class="pdf-download-btn"
+        onclick="downloadPDF('pdf/SKV.pdf','Wire-Mesh-Glass.pdf')">
+        <i class="fa-solid fa-file-pdf pdf-icon"></i>
+        Download
+      </button>
+    </div>
+
+    <div class="pdf-card">
+      <h3 class="pdf-title">Lacquered Glass</h3>
+
+      <img src="pdf/img-1.jpg" alt="Reeded Glass" class="pdf-thumb">
+
+      <button class="pdf-download-btn"
+        onclick="downloadPDF('pdf/SKV.pdf','Reeded-Glass.pdf')">
+        <i class="fa-solid fa-file-pdf pdf-icon"></i>
+        Download
+      </button>
+    </div>
+
+  </div>
+</section>
+
+<script>
+function downloadPDF(path, name) {
+  const link = document.createElement("a");
+  link.href = path;
+  link.download = name;
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+}
+</script>
+
+<script>
+const pdfCards = document.querySelectorAll('.pdf-card');
+
+const observer = new IntersectionObserver(
+  entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('show');
+      }
+    });
+  },
+  {
+    threshold: 0.2
+  }
+);
+
+pdfCards.forEach(card => observer.observe(card));
+</script>
+
+
+<!-- pdf download section End-->
+
+
+
+
+
+
+
+
+<!-- FOOTER START -->
+
+<section class="site-footer">
+  <div class="footer-overlay"></div>
+
+  <div class="footer-container">
+
+    <!-- COLUMN 1 : BRAND / MAIN LINKS -->
+    <div class="footer-col">
+      <h3>Quick Links</h3>
+      <ul class="footer-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Downloads</a></li>
+        <li><a href="#">Products</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- COLUMN 2 : PRODUCTS -->
+    <div class="footer-col">
+      <h3>Products</h3>
+      <ul class="footer-links">
+        <li><a href="#">Fabric Laminated Glass</a></li>
+        <li><a href="#">Wire Mesh Glass</a></li>
+        <li><a href="#">Reeded Glass</a></li>
+        <li><a href="Tinted-Glass.html">Tinted Glass</a></li>
+        <li><a href="Marble-Glass.html">Marble Glass</a></li>
+        <li><a href="Lacquered-Glass.html">Lacquered Glass</a></li>
+      </ul>
+    </div>
+
+    <!-- COLUMN 3 : CONTACT -->
+    <div class="footer-col">
+      <h3>Contact Us</h3>
+      <ul class="footer-contact">
+        <li><span>Plot No. 4, Near Sun Life Hospital,
+          Village- Bhangrola, Gurugram, Haryana-122505</span> </li>
+        <li><span>📞</span> +91 9953700055</li>
+        <li><span>📞</span> +91 8447065114</li>
+        <li><span>✉️</span>  info@skvglass.com</li>
+        <li><span></span>  www.skvglass.com</li>
+      </ul>
+    </div>
+
+    <!-- COLUMN 4 : SOCIAL -->
+   <div class="footer-col">
+  <h3>Follow Us</h3>
+
+  <div class="footer-social">
+    <a href="#" class="whatsapp" aria-label="WhatsApp">
+      <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <a href="#" class="facebook" aria-label="Facebook">
+      <i class="fa-brands fa-facebook-f"></i>
+    </a>
+
+    <a href="#" class="instagram" aria-label="Instagram">
+      <i class="fa-brands fa-instagram"></i>
+    </a>
+
+    <a href="#" class="youtube" aria-label="YouTube">
+      <i class="fa-brands fa-youtube"></i>
+    </a>
+  </div>
+</div>
+
+
+  </div>
+
+  <!-- BOTTOM BAR -->
+  <div class="footer-bottom">
+    © 2025 SKV Glass & Interiors. All Rights Reserved.
+  </div>
+</section>
+<!-- FOOTER END -->
+
+
+
+<script src="js/index.js"></script>
+<script src="js/product.js"></script>
+</body>
+</html>

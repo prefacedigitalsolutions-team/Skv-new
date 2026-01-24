@@ -1,0 +1,543 @@
+
+
+ /* About  banaar section page start*/
+.about-hero-xl {
+    height: 99vh;
+    display: grid;
+    grid-template-columns: 40% 60%;
+    background-color: #05070d;
+    background-image: url("../img-1/country-4.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    position: relative;
+    isolation: isolate; /* IMPORTANT */
+}
+
+/* DARK OVERLAY (ONLY BACKGROUND) */
+.about-hero-xl::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        120deg,
+        rgba(5,7,13,0.90),
+        rgba(5,7,13,0.77),
+        rgba(5,7,13,0.95)
+    );
+    z-index: 1;
+}
+
+/* ================= TEXT ================= */
+
+.xl-text {
+    padding: 11%;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    z-index: 3; /* ABOVE OVERLAY */
+}
+
+.xl-tag {
+    letter-spacing: 4px;
+    font-size: 1.1rem;
+    color: #6dd5ed;
+    opacity: 0;
+    transform: translateY(40px);
+}
+
+.xl-title {
+    font-size: 3.6rem;
+    line-height: 1.05;
+    margin: 20px 0;
+    opacity: 0;
+    letter-spacing: 2px;
+    transform: translateY(60px);
+}
+
+.xl-desc {
+    font-size: 1.16rem;
+    max-width: 420px;
+    opacity: 0;
+    letter-spacing: 1px;
+    line-height: 1.8;
+    transform: translateY(60px);
+}
+
+/* ================= IMAGE / SLIDER ================= */
+
+.xl-image {
+    position: relative;
+    z-index: 2; /* ABOVE OVERLAY */
+    height: 100%;
+    min-height: 99vh;
+    overflow: hidden;
+    transform-origin: center;
+    will-change: transform;
+}
+
+/* SLIDER IMAGES */
+.xl-image .slide {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    opacity: 0;
+    transform: translateX(80px) scale(1.25);
+    transition:
+        opacity 1.2s ease,
+        transform 1.2s ease;
+}
+
+/* ACTIVE SLIDE */
+.xl-image .slide.active {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+}
+
+/* EXIT SLIDE */
+.xl-image .slide.exit-left {
+    opacity: 0;
+    transform: translateX(-80px) scale(1.1);
+}
+
+/* ================= TEXT REVEAL ================= */
+
+.about-hero-xl.active .xl-tag,
+.about-hero-xl.active .xl-title,
+.about-hero-xl.active .xl-desc {
+    opacity: 1;
+    transform: translateY(0);
+    transition: 1s ease;
+}
+
+.about-hero-xl.active .xl-title {
+    transition-delay: 0.15s;
+}
+
+.about-hero-xl.active .xl-desc {
+    transition-delay: 0.3s;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+
+    .about-hero-xl {
+        grid-template-columns: 50% 50%;
+        height: 85vh;
+    }
+
+    .xl-text {
+        padding: 8%;
+    }
+
+    .xl-tag {
+        font-size: 0.85rem;
+        letter-spacing: 3px;
+    }
+
+    .xl-title {
+        font-size: 2.4rem;
+        line-height: 1.15;
+    }
+
+    .xl-desc {
+        font-size: 1rem;
+        line-height: 1.7;
+    }
+
+    .xl-image {
+        min-height: 85vh;
+    }
+
+    .xl-image .slide {
+        transform: translateX(50px) scale(1.15);
+    }
+}
+
+
+@media (max-width: 480px) {
+
+    .about-hero-xl {
+        grid-template-columns: 1fr; /* stack for clean look */
+        height: auto;
+    }
+
+    /* TEXT */
+    .xl-text {
+        padding: 10% 6%;
+        text-align: center;
+        align-items: center;
+    }
+
+    .xl-title {
+        font-size: 1.7rem;
+    }
+
+    .xl-desc {
+        font-size: 0.95rem;
+        line-height: 1.6;
+    }
+
+    /* IMAGE */
+    .xl-image {
+        width: 100%;
+        height: auto;
+        min-height: unset;
+        aspect-ratio: 16 / 9;      /* NO GAP */
+        transform: none !important;
+    }
+
+    .xl-image .slide {
+        object-fit: cover;        
+        transform: none !important;
+    }
+}
+
+
+
+ /* About  banaar section page end*/
+
+
+
+
+ /* About compani section start */
+
+.about-clean-sec {
+    background: #ffffff;
+    padding: 100px 0;
+    overflow: hidden;
+}
+
+/* */
+
+.about-clean-wrap {
+    max-width: 1350px;                 
+    margin: auto;
+    padding: 0 6%;                     
+    display: grid;
+    grid-template-columns: 1.35fr 0.65fr; 
+    align-items: center;
+    gap: 30px;
+}
+
+/*  TEXT ================= */
+
+.about-clean-text {
+    opacity: 0;
+    transform: translateY(50px);
+}
+
+.about-clean-tag {
+    font-size: 0.85rem;
+    letter-spacing: 4px;
+    color: #0a6cff;
+    display: inline-block;
+    margin-bottom: 18px;
+}
+
+.about-clean-title {
+    font-size: 3rem;
+    line-height: 1.2;
+    color: #111;
+    margin-bottom: 26px;
+}
+
+.about-clean-text p {
+    font-size: 1.05rem;
+    line-height: 1.85;
+    color: #444;
+    margin-bottom: 20px;
+    max-width: 700px;     
+}
+
+
+/*  IMAGE=  */
+
+.about-clean-image {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    aspect-ratio: 6 / 10;      
+    max-width: 185%;           
+}
+
+
+.about-clean-image::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to bottom,
+        rgba(255,255,255,0.15),
+        rgba(255,255,255,0)
+    );
+    pointer-events: none;
+}
+
+.about-clean-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: scale(1.08);     /* subtle premium zoom */
+    opacity: 0;
+}
+
+/* ================= ANIMATION ================= */
+
+.about-clean-sec.active .about-clean-text {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.about-clean-sec.active .about-clean-image img {
+    opacity: 1;
+    transform: scale(1);
+    transition: opacity 1.6s ease, transform 1.6s ease;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 768px) {
+
+    .about-clean-sec {
+        padding: 60px 0;
+    }
+
+    .about-clean-wrap {
+        grid-template-columns: 1fr;
+        gap: 50px;
+        padding: 0 6%;
+    }
+
+    .about-clean-text {
+        text-align: center;
+    }
+
+    .about-clean-title {
+        font-size: 2rem;
+    }
+
+    .about-clean-text p {
+        max-width: 100%;
+        font-size: 0.95rem;
+        line-height: 1.7;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .about-clean-image {
+        max-width: 100%;
+        aspect-ratio: 16 / 9;
+        margin: auto;
+    }
+}
+
+
+
+@media (max-width: 480px) {
+
+    .about-clean-title {
+        font-size: 1.7rem;
+    }
+
+    .about-clean-text p {
+        font-size: 0.9rem;
+    }
+
+    .about-clean-image {
+        aspect-ratio: 5 / 7;
+        border-radius: 6px;
+    }
+}
+
+/* About compani + paragraph section End */
+
+
+
+
+
+ /* images + product section start */
+
+.image-grid-head {
+    max-width: 800px;
+    margin: 0 auto 70px;
+    padding: 0 6%;
+    text-align: center;
+}
+
+.grid-tag {
+    font-size: 0.85rem;
+    letter-spacing: 4px;
+    color: #0a6cff;
+    display: inline-block;
+    margin-bottom: 14px;
+}
+
+.grid-title {
+    font-size: 2.6rem;
+    line-height: 1.2;
+    color: #111;
+    margin-bottom: 18px;
+}
+
+.grid-desc {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #555;
+    max-width: 640px;
+    margin: auto;
+}
+
+
+
+.image-grid-sec {
+    padding: 100px 0;
+    background: #fff;
+}
+
+.image-grid {
+    max-width: 1300px;
+    margin: auto;
+    padding: 0 6%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 + 2 layout */
+    gap: 30px;
+}
+
+/* IMAGE BOX */
+.img-box {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    height: 360px; /* BIG IMAGES */
+    cursor: pointer;
+}
+
+/* IMAGE */
+.img-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.8s ease;
+}
+
+/* OVERLAY */
+.img-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to top,
+        rgba(0,0,0,0.75),
+        rgba(0,0,0,0.15)
+    );
+    display: flex;
+    align-items: flex-end;
+    padding: 30px;
+    opacity: 0;
+    transition: opacity 0.6s ease;
+}
+
+/* TITLE */
+.img-overlay h3 {
+    color: #fff;
+    font-size: 1.6rem;
+    letter-spacing: 1px;
+    transform: translateY(20px);
+    transition: transform 0.6s ease;
+}
+
+/* HOVER EFFECT */
+.img-box:hover img {
+    transform: scale(1.1);
+}
+
+.img-box:hover .img-overlay {
+    opacity: 1;
+}
+
+.img-box:hover .img-overlay h3 {
+    transform: translateY(0);
+}
+
+/* RESPONSIVE ================= */
+
+@media (max-width: 900px) {
+    .image-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .img-box {
+        height: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    .img-box {
+        height: 240px;
+    }
+
+    .img-overlay h3 {
+        font-size: 1rem;
+    }
+}
+@media (max-width: 768px) {
+
+    .image-grid-sec {
+        padding: 70px 0;
+    }
+
+    .image-grid-head {
+        margin-bottom: 50px;
+        padding: 0 7%;
+    }
+
+    .grid-tag {
+        font-size: 0.75rem;
+        letter-spacing: 3px;
+    }
+
+    .grid-title {
+        font-size: 2rem;
+    }
+
+    .grid-desc {
+        font-size: 0.95rem;
+        line-height: 1.7;
+        max-width: 100%;
+    }
+
+    .image-grid {
+        grid-template-columns: 1fr;   /* 🔥 single column */
+        gap: 24px;
+        padding: 0 7%;
+    }
+
+    .img-box {
+        height: 260px;
+        border-radius: 10px;
+    }
+
+    .img-overlay {
+        padding: 20px;
+        opacity: 1; /* 🔥 always visible on mobile */
+    }
+
+    .img-overlay h3 {
+        font-size: 1.3rem;
+        transform: translateY(0);
+    }
+
+    .img-box img {
+        transform: scale(1.05);
+    }
+}
+
+
+ /* images + product section End */
