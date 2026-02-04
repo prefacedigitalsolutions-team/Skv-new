@@ -356,3 +356,50 @@
     margin-top: 12px;
   }
 }
+
+@media screen and (min-width: 1400px) and (max-width: 2200px) {
+  .hardware-gallery {
+    flex-direction: row; 
+    gap: 50px;
+    align-items: flex-start;
+  }
+
+  /* Left Big Image */
+  .left-image {
+    flex: 0 0 500px;  
+    height: 239vh;    
+    border-radius: 2px;
+  }
+
+  .left-overlay {
+    padding: 40px;
+  }
+
+  .left-overlay p {
+    font-size: 50px;
+    line-height: 1.6;
+  }
+
+  /* Right Grid */
+  .right-grid {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+
+  /* Grid Items (Choti Images) */
+  .grid-item {
+    height: auto;  
+  }
+
+  .grid-item img,
+  .grid-item::after {
+    height: 450px;
+    border-radius: 6px;
+  }
+
+  .grid-item span {
+    font-size: 20px;
+  }
+}
